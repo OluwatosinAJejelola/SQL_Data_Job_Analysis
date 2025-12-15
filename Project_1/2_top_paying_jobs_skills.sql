@@ -22,7 +22,8 @@ WITH top_paying_jobs AS (
     LIMIT 10
     )
 
-SELECT 
+, top_skill AS ( 
+    SELECT 
     top_paying_jobs.*,
     skills
 FROM
@@ -31,3 +32,15 @@ INNER JOIN skills_job_dim ON skills_job_dim.job_id=top_paying_jobs.job_id
 INNER JOIN skills_dim ON skills_job_dim.skill_id=skills_dim.skill_id
 ORDER BY
     salary_year_avg DESC
+)
+SELECT
+    skills,
+    COUNT(skills) AS skills_count
+FROM 
+top_skill
+GROUP BY
+skills
+ORDER BY
+skills_count DESC
+LIMIT 10
+
