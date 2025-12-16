@@ -1,5 +1,5 @@
 # Introduction
-    This project dives into the data analytics job market, with a focus on data analyst roles. It highlights:
+### This project dives into the data analytics job market, with a focus on data analyst roles. It highlights :
 - 💰 The highest-paying positions
 - 🔥 The most in-demand skills
 - ✅ Where strong demand aligns with competitive salaries
